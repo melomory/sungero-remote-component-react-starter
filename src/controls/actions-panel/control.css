@@ -1,0 +1,42 @@
+.buttons-panel {
+  /* Для соответствия общему UI веб клиента и текущей теме (светлая, темная) лучше использовать css-переменные темы веб клиента. */
+  /* Здесь используется задание локальных переменных с fallback, таким образом выполняется изоляция стилей и сохраняется возможность использовать внешние стили. */
+  --buttons-panel-button-background-color: var(--theme_button-background, #0b6edc);
+  --buttons-panel-button-border-color: var(--theme_button-border-color, transparent);
+  --buttons-panel-button-hover-background-color: var(--theme_hovered-button-background, #0958b5);
+  --buttons-panel-button-text-color: var(--theme_text-primary, #ffffff);
+  --buttons-panel-button-hover-text-color: var(--theme_primary-contrast, #ffffff);
+  --buttons-panel-font-size: var(--theme_font-size-sp, 12px);
+
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  justify-content: space-around;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.buttons-panel__button {
+  margin: 3px;
+  padding: 4px 5px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background-color: var(--buttons-panel-button-background-color);
+  font-size: var(--buttons-panel-font-size);
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: var(--buttons-panel-button-text-color);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.buttons-panel__button:hover {
+  background-color: var(--buttons-panel-button-hover-background-color);
+  border-color: var(--buttons-panel-button-border-color);
+  color: var(--buttons-panel-button-hover-text-color);
+}

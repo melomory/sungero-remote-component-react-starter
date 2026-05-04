@@ -1,0 +1,56 @@
+{
+  "header": {
+    "title": "Remote Control Sandbox",
+    "subtitle": "Preview embedded controls in different host editor layouts"
+  },
+  "badges": {
+    "hostStylesOn": "host styles on",
+    "hostStylesOff": "host styles off"
+  },
+  "toolbar": {
+    "control": "Control",
+    "renderMode": "Render mode",
+    "culture": "Culture",
+    "theme": "Theme",
+    "editorLayout": "Editor layout",
+    "hostStyles": "Host styles",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "height": "Height",
+    "stretchVertically": "Stretch vertically"
+  },
+  "renderMode": {
+    "direct": "direct",
+    "loader": "loader"
+  },
+  "theme": {
+    "default": "default",
+    "night": "night"
+  },
+  "layout": {
+    "headeredHorizontal": "headered-horizontal",
+    "headeredVertical": "headered-vertical"
+  },
+  "preview": {
+    "title": "Preview",
+    "subtitle": "The selected control wrapped into a host-like editor shell",
+    "empty": "No component selected"
+  },
+  "environment": {
+    "title": "Environment",
+    "subtitle": "Current standalone host configuration",
+    "control": "Control",
+    "controlId": "Control id",
+    "mode": "Mode",
+    "culture": "Culture",
+    "theme": "Theme",
+    "controlScope": "Scope",
+    "layout": "Layout",
+    "hostStyles": "Host styles",
+    "enabled": "enabled",
+    "disabled": "disabled"
+  },
+  "fallback": {
+    "field": "Field"
+  }
+}

@@ -1,0 +1,69 @@
+.string-control {
+  /* Для соответствия общему UI веб клиента и текущей теме (светлая, темная) лучше использовать css-переменные темы веб клиента. */
+  /* Здесь используется задание локальных переменных с fallback, таким образом выполняется изоляция стилей и сохраняется возможность использовать внешние стили. */
+  --string-control-label-color: var(--theme_label-enabled-color, #0054a0);
+  --string-control-label-disabled-color: var(--theme_label-disabled-color, #727272);
+  --string-control-border-color: var(--theme_border-color-dark, #dfe0e3);
+  --string-control-focus-border-color: var(--theme_focused-editor-border-color, #0054a0);
+  --string-control-text-color: var(--theme_text-primary, #222);
+  --string-control-background-color: var(--theme_control-background-color, transparent);
+
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  padding-left: 2px;
+  padding-right: 2px;
+  width: 100%;
+  color: var(--string-control-text-color);
+
+  .control-label {
+    flex: 0 0 auto;
+    margin-left: 5px;
+    -webkit-font-smoothing: antialiased;
+    color: var(--string-control-label-color);
+    pointer-events: none;
+
+    &.control-label_position_left-center {
+      align-self: center;
+      margin-bottom: 1px;
+      margin-right: 10px;
+    }
+
+    &.control-label_disabled {
+      color: var(--string-control-label-disabled-color);
+    }
+  }
+
+  .string-editor {
+    display: flex;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    line-height: normal;
+    overflow: hidden;
+    transition: border-color 0.14s linear;
+    width: 100%;
+
+    &.string-editor_bordered {
+      border: 0;
+      border-bottom: thin solid var(--string-control-border-color);
+      border-radius: 0;
+      margin-bottom: 1px;
+    }
+
+    &.string-editor_focused {
+      border-bottom: 2px solid var(--string-control-focus-border-color);
+      margin-bottom: 0;
+    }
+
+    .string-editor__input {
+      -webkit-font-smoothing: antialiased;
+      background-color: initial;
+      border: 0;
+      color: inherit;
+      line-height: normal;
+      padding: 0 3px 1px;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+  }
+}

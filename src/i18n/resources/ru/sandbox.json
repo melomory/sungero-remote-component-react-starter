@@ -1,0 +1,54 @@
+{
+  "header": {
+    "title": "Песочница сторонних компонентов",
+    "subtitle": "Предпросмотр сторонних компонентов в разных редакторных оболочках host-системы"
+  },
+  "badges": {
+    "hostStylesOn": "стили host включены",
+    "hostStylesOff": "стили host выключены"
+  },
+  "toolbar": {
+    "control": "Контрол",
+    "renderMode": "Режим рендера",
+    "culture": "Культура",
+    "theme": "Тема",
+    "editorLayout": "Размещение",
+    "hostStyles": "Стили host",
+    "controlScope": "Контекст",
+    "enabled": "Включено",
+    "disabled": "Выключено",
+    "height": "Высота",
+    "stretchVertically": "Растягивать по вертикали"
+  },
+  "renderMode": {
+    "direct": "direct",
+    "loader": "loader"
+  },
+  "theme": {
+    "default": "По умолчанию",
+    "night": "Ночной режим"
+  },
+  "layout": {
+    "headeredHorizontal": "Горизонтально",
+    "headeredVertical": "Вертикально"
+  },
+  "preview": {
+    "title": "Предпросмотр",
+    "subtitle": "Выбранный контрол в host-подобной оболочке редактора",
+    "empty": "Контрол не выбран"
+  },
+  "environment": {
+    "title": "Окружение",
+    "subtitle": "Текущая конфигурация standalone host",
+    "control": "Контрол",
+    "controlId": "Идентификатор",
+    "mode": "Режим",
+    "culture": "Культура",
+    "theme": "Тема",
+    "controlScope": "Контекст",
+    "layout": "Размещение",
+    "hostStyles": "Стили host",
+    "enabled": "включены",
+    "disabled": "выключены"
+  }
+}

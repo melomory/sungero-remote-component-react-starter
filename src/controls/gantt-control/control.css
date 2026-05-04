@@ -1,0 +1,26 @@
+.gantt {
+  /* Для соответствия общему UI веб клиента и текущей теме (светлая, темная) лучше использовать css-переменные темы веб клиента. */
+  /* Здесь используется задание локальных переменных с fallback, таким образом выполняется изоляция стилей и сохраняется возможность использовать внешние стили. */
+  --gantt-padding-inline: 10px;
+  --gantt-title-font-family: var(--theme_font-family, Arial, sans-serif);
+  --gantt-title-font-size: var(--theme_font-size-xl, 20px);
+  --gantt-title-font-weight: var(--theme_font-weight-regular, 400);
+  --gantt-title-line-height: 27px;
+  --gantt-title-margin-block: 10px;
+  --gantt-button-color: var(--theme_cover-title-color, #222222);
+
+  padding: 0 var(--gantt-padding-inline);
+  min-width: 0;
+}
+
+.gantt__title {
+  font-family: var(--gantt-title-font-family);
+  font-size: var(--gantt-title-font-size);
+  font-weight: var(--gantt-title-font-weight);
+  line-height: var(--gantt-title-line-height);
+  margin: var(--gantt-title-margin-block) 0;
+}
+
+.gantt .gantt-button {
+  color: var(--gantt-button-color);
+}

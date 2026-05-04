@@ -1,0 +1,128 @@
+.preformed-work-details-grid {
+  /* Для соответствия общему UI веб клиента и текущей теме (светлая, темная) лучше использовать css-переменные темы веб клиента. */
+  /* Здесь используется задание локальных переменных с fallback, таким образом выполняется изоляция стилей и сохраняется возможность использовать внешние стили. */
+  --preformed-work-details-grid-background-color: var(--theme_background, #ffffff);
+  --preformed-work-details-grid-button-background: var(--theme_primary, #0b6edc);
+  --preformed-work-details-grid-button-text-color: var(--theme_button-background-text, #ffffff);
+  --preformed-work-details-grid-button-hover-background: var(
+    --theme_hovered-button-background,
+    #0958b5
+  );
+  --preformed-work-details-grid-button-border-color: var(--theme_button-border-color, transparent);
+
+  --preformed-work-details-grid-font-family: var(--theme_font-family, Arial, sans-serif);
+  --preformed-work-details-grid-font-size: var(--theme_font-size-m, 14px);
+  --preformed-work-details-grid-font-weight: var(--theme_font-weight-regular, 400);
+
+  --preformed-work-details-grid-header-background: var(--theme_hover, #f3f4f6);
+  --preformed-work-details-grid-header-hover-background: var(--theme_hover-dark, #e5e7eb);
+  --preformed-work-details-grid-header-text-color: var(--theme_text-secondary, #666666);
+
+  --preformed-work-details-grid-cell-text-color: var(--theme_grid-row-text-color, #222222);
+  --preformed-work-details-grid-selected-outline-color: var(
+    --theme_border-color-secondary,
+    #4f8cff
+  );
+  --preformed-work-details-grid-row-hover-background: var(
+    --theme_hovered-grid-row-background,
+    #f9fafb
+  );
+
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  background-color: var(--preformed-work-details-grid-background-color);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.preformed-work-details-grid__add-new-button {
+  flex-grow: 1;
+  background: var(--preformed-work-details-grid-button-background);
+  display: flex;
+  border-radius: 0;
+  border-width: 0;
+  margin: 0 0 5px 11px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-family: var(--preformed-work-details-grid-font-family);
+  font-size: var(--preformed-work-details-grid-font-size);
+  font-weight: var(--preformed-work-details-grid-font-weight);
+  -webkit-font-smoothing: antialiased;
+  color: var(--preformed-work-details-grid-button-text-color);
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.preformed-work-details-grid__row-button {
+  flex-grow: 1;
+  align-self: center;
+  background: var(--preformed-work-details-grid-button-background);
+  display: flex;
+  border-radius: 0;
+  border-width: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-family: var(--preformed-work-details-grid-font-family);
+  font-size: var(--preformed-work-details-grid-font-size);
+  font-weight: var(--preformed-work-details-grid-font-weight);
+  -webkit-font-smoothing: antialiased;
+  color: var(--preformed-work-details-grid-button-text-color);
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.preformed-work-details-grid__add-new-button:hover,
+.preformed-work-details-grid__row-button:hover {
+  background-color: var(--preformed-work-details-grid-button-hover-background);
+  border-color: var(--preformed-work-details-grid-button-border-color);
+}
+
+.preformed-work-details-grid__grid {
+  background-color: transparent;
+  border: none;
+  min-width: 0;
+  width: 100%;
+}
+
+.preformed-work-details-grid__grid .rdg-cell[role="columnheader"] {
+  background-color: var(--preformed-work-details-grid-header-background);
+  font-family: var(--preformed-work-details-grid-font-family);
+  font-size: var(--preformed-work-details-grid-font-size);
+  font-weight: var(--preformed-work-details-grid-font-weight);
+  color: var(--preformed-work-details-grid-header-text-color);
+  border: none;
+}
+
+.preformed-work-details-grid__grid .rdg-cell[role="columnheader"]:hover {
+  background-color: var(--preformed-work-details-grid-header-hover-background);
+}
+
+.preformed-work-details-grid__grid .rdg-cell[role="gridcell"] {
+  display: flex;
+  border: none;
+  font-family: var(--preformed-work-details-grid-font-family);
+  font-size: var(--preformed-work-details-grid-font-size);
+  font-weight: var(--preformed-work-details-grid-font-weight);
+  color: var(--preformed-work-details-grid-cell-text-color);
+}
+
+.preformed-work-details-grid__grid .rdg-cell[role="gridcell"][aria-selected="true"] {
+  outline: 2px solid var(--preformed-work-details-grid-selected-outline-color);
+}
+
+.preformed-work-details-grid__grid .rdg-row[role="row"] {
+  background-color: transparent;
+}
+
+.preformed-work-details-grid__grid .rdg-row[role="row"]:hover {
+  background-color: var(--preformed-work-details-grid-row-hover-background);
+}
+
+.preformed-work-details-grid__summary-cell {
+  background-color: var(--preformed-work-details-grid-background-color);
+}
